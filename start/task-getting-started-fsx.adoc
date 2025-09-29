@@ -26,7 +26,7 @@ Adding AWS credentials is required to provide the NetApp Console with the permis
 To perform some management tasks from the NetApp Console, you either need a Console agent or a NetApp Workloads link. A _Console agent_ is a virtual machine that you deploy in your VPC to manage your FSx for ONTAP file systems. A _link_ leverages AWS Lambda to create a trust relationship and connectivity to your FSx for ONTAP file systems.
 
 [role="quick-margin-list"]
-* link:../start/concept-fsx-aws.html#connectors-and-links-unlock-all-fsx-for-ontap-features[Learn when a Console agent or link is required for FSx for ONTAP management]
+* link:../start/concept-fsx-aws.html#console-agents-and-links-unlock-all-fsx-for-ontap-features[Learn when a Console agent or link is required for FSx for ONTAP management]
 * https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-aws.html[Learn how to create a Console agent in AWS^]
 * https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html[Learn how to create a Console agent on-premises^]
 * https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to create a link^]
