@@ -1,14 +1,38 @@
+# Start snippet: landing page
 indexpage:
-  title: # Unquoted string 
-  lead: # Quoted string
-  summary: # Quoted string 
-  keywords: # Unquoted comma-delimited list of keywords 
+  title: Amazon FSx for NetApp ONTAP management
+  lead: Amazon FSx for NetApp ONTAP brings the full capabilities of ONTAP to a native AWS managed service delivering a consistent hybrid cloud experience. This documentation describes how to manage FSx for ONTAP in the NetApp Console.
+  summary: Amazon FSx for NetApp ONTAP brings the full capabilities of ONTAP to a native AWS managed service delivering a consistent hybrid cloud experience. This documentation describes how to manage FSx for ONTAP in the NetApp Console.
+  keywords: amazon, fsx, netapp, ontap, bluexp, create, manage, NetApp Console
   tiles: 
-    # Tile definition 
-    - title: # Quoted or unquoted string
-      links: 
-        # Link definition
-        - title: # Quoted or unquoted string
-          url: # Path to target
-        # Next link on this tile (title/url pair)
-    # Next tile on this page (title/links)
+    - title: Get started
+      links:
+        - title: Release notes
+          url: /whats-new.html
+        - title: Learn about Amazon FSx for NetApp ONTAP
+          url: /start/concept-fsx-aws.html
+        - title: Quick start
+          url: /start/task-getting-started-fsx.html
+        - title: Create or discover a system
+          url: /use/task-create-fsx-system.html
+    - title: Use FSx for ONTAP
+      links:
+        - title: Create an FSx for ONTAP file system
+          url: /use/task-create-fsx-system.html
+        - title: Manage an FSx for ONTAP file system
+          url: /use/task-manage-fsx-systems.html
+    - title: Knowledge and support
+      links:
+        - title: Register for support
+          url: /support/task-support-registration.html
+        - title: Get help
+          url: /support/task-get-help.html
+    - title: Blogs & community
+      links:
+        - title: NetApp Console
+          url: https://www.netapp.com/console
+        - title: NetApp Data Services
+          url: https://www.netapp.com/data-services/
+        - title: NetApp Community
+          url: https://community.netapp.com/
+  

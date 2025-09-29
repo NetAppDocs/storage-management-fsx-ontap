@@ -1,0 +1,5 @@
+=== Maintenance window start time
+When link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-creating-fsx-working-environment.html#create-an-amazon-fsx-for-netapp-ontap-working-environment[creating a working environment], you can specify the start time for the weekly 30-minute maintenance window to ensure maintenance does not conflict with critical business activities. 
+
+=== Distribute volume data using FlexGroups
+When creating a volume, you can enable data optimization by creating a FlexGroup to distribute data across volumes.

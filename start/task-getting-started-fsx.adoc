@@ -1,0 +1,37 @@
+---
+sidebar: sidebar
+permalink: start/task-getting-started-fsx.html
+keywords: Amazon FSx for NetApp ONTAP, fsx, netapp, data fabric, hybrid cloud, cloud, public cloud, networking, vpc, quick, getting started, install, installing, deploy, deploying, setup, setting up, launching, requirements, prerequisites, netapp console, get started, permissions, policy, iam policy, policies, attach, iam user, access key, secret key, keys, sign up, cloud manager, create, bluexp
+summary: "Get started with Amazon FSx for NetApp ONTAP in the NetApp Console by adding credentials, creating a Console agent or link, and by creating or discovering a file system."
+---
+
+= Quick start for Amazon FSx for NetApp ONTAP
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+Get started with Amazon FSx for NetApp ONTAP in the NetApp Console by adding credentials, creating a Console agent or link, and by creating or discovering a file system.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] link:../requirements/task-setting-up-permissions-fsx.html[Add credentials and permissions]
+
+[role="quick-margin-para"]
+Adding AWS credentials is required to provide the NetApp Console with the permissions needed to create and manage FSx for ONTAP file systems. You can choose between _read-only_ and _read/write_ permissions.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Optional: Create a Console agent or a link
+
+[role="quick-margin-para"]
+To perform some management tasks from the NetApp Console, you either need a Console agent or a NetApp Workloads link. A _Console agent_ is a virtual machine that you deploy in your VPC to manage your FSx for ONTAP file systems. A _link_ leverages AWS Lambda to create a trust relationship and connectivity to your FSx for ONTAP file systems.
+
+[role="quick-margin-list"]
+* link:../start/concept-fsx-aws.html#connectors-and-links-unlock-all-fsx-for-ontap-features[Learn when a Console agent or link is required for FSx for ONTAP management]
+* https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-aws.html[Learn how to create a Console agent in AWS^]
+* https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html[Learn how to create a Console agent on-premises^]
+* https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to create a link^]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] link:../use/task-create-fsx-system.html[Create or discover an FSx for ONTAP system]
+
+[role="quick-margin-para"]
+Create your FSx for ONTAP file system directly from the NetApp Console or discover a file system that you've already created in your AWS environment.

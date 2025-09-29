@@ -1,0 +1,4 @@
+---
+permalink: use/task-creating-fsx-working-environment.html
+redirect: console-fsx-ontap/use/task-create-fsx-system.html
+---
