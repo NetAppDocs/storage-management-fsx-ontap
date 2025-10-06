@@ -1,0 +1,27 @@
+---
+sidebar: sidebar
+permalink: use/task-remove-filesystem.html
+keywords: amazon fsx for netapp ontap, fsx for ontap, fsx, remove fsx for ontap file system, remove file system, file system, disassociate file system, bluexp, NetApp Console
+summary: "Remove an FSx for ONTAP file system from a project in the NetApp Console." 
+---
+
+= Remove an FSx for ONTAP file system from a project
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+Remove an FSx for ONTAP file system from a project in the NetApp Console. This operation dissociates the file system from one project so that you can associate it with another project within the same account.
+
+.About this task
+Removing an FSx for ONTAP file system from a project removes it from the NetApp Console. It does not delete the FSx for ONTAP file system. You can later rediscover the FSx for ONTAP file system in the same or in a different project from within the same account.
+
+.Steps
+. From the NetApp Console menu, select *Storage* and then *Management*. 
+. Select the file system that you want to remove.
+. Select *Enter System*.
+. From FSx for ONTAP in Storage, select the three-dot menu and then select *Remove from project*. 
+. Select *Remove* to confirm the removal of the file system from the project.
+

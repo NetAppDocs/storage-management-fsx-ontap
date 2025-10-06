@@ -1,0 +1,5 @@
+=== Support for replicating data between two FSx for ONTAP file systems
+
+Data replication is now available between two FSx for ONTAP file systems from the canvas in the BlueXP console. 
+
+link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-manage-working-environment.html#replicate-data[Replicate data]

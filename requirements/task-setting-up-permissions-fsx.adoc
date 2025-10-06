@@ -1,0 +1,301 @@
+---
+sidebar: sidebar
+permalink: requirements/task-setting-up-permissions-fsx.html
+keywords: fsx for ontap, iam, user role, permissions, credentials, bluexp
+summary: To create or manage an FSx for ONTAP working environment, you need to add AWS credentials in the NetApp Console by providing the ARN of an IAM role that gives the permissions needed to create an FSx for ONTAP system from the NetApp Console.
+---
+
+= Set up permissions for FSx for ONTAP
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+To create or manage an FSx for ONTAP working environment, you need to add AWS credentials in the NetApp Console by providing the ARN of an IAM role that gives the permissions needed to create an FSx for ONTAP system from the NetApp Console.
+
+== Why AWS credentials are required
+
+AWS credentials are required to create and manage FSx for ONTAP systems from the NetApp Console. You can create new AWS credentials or add AWS credentials to an existing organization. Credentials provide the permissions needed to manage resources and processes within your AWS cloud environment from the NetApp Console.
+
+Credentials and permissions are managed via NetApp Workload Factory. Workload Factory is a life-cycle management platform designed to help users optimize workloads using Amazon FSx for NetApp ONTAP file systems. The NetApp Console uses the same set of AWS credentials and permissions as Workload Factory.
+
+The Workload Factory interface provides FSx for ONTAP users with options to enable workload capabilities like Storage, VMware, Databases, and GenAI, and to select permissions for the workloads. _Storage_ is the storage management capability in Workload Factory and it is the only capability you need to enable and add credentials for to create and manage your FSx for ONTAP file systems. 
+
+== About this task 
+When adding new credentials for FSx for ONTAP from Storage in Workload Factory, you'll need to decide which level of permissions, or _operational mode_, you'd like to operate in. To discover and deploy AWS resources like FSx for ONTAP file systems, you'll need _read-only_ or _read/write_ permissions. FSx for ONTAP will operate in _basic_ mode unless you select _read-only_ mode or _read/write_ mode. _Read-only_ are the same as view permissions. _Read/Write_ are the same as operate permissions. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[Learn more about operational modes]. 
+
+New and existing AWS credentials are viewable from the Administration menu on the *Credentials* page. 
+
+image:screenshot-netapp-console-administration-credentials.png["A screenshot of the Administration menu and the Credentials option highlighted in the NetApp Console administration menu."]
+
+You can add credentials using two methods:
+
+* *Manually*: You create the IAM policy and the IAM role in your AWS account while adding credentials in Workload Factory. 
+* *Automatically*: You capture a minimal amount of information about permissions and then use a CloudFormation stack to create the IAM policies and role for your credentials.
+
+== Add credentials to an account manually
+
+You can add AWS credentials to the NetApp Console manually to give your account the permissions needed to manage the AWS resources that you'll use to run your unique workloads. Each set of credentials that you add will include one or more IAM policies based on the workload capabilities you want to use, and an IAM role that is assigned to your account.
+
+There are three parts to creating the credentials:
+
+* Select the services and permissions level that you would like to use and then create IAM policies from the AWS Management Console.
+* Create an IAM role from the AWS Management Console.
+* From Workloads in the NetApp Console, enter a name and add the credentials.
+
+To create or manage an FSx for ONTAP working environment, you need to add AWS credentials to Workloads in the NetApp Console by providing the ARN of an IAM role that gives Workloads the permissions needed to create an FSx for ONTAP working environment.
+
+.Before you begin
+
+You'll need to have credentials to log in to your AWS account.
+
+.Steps
+
+. From the NetApp Console menu, select *Administration* and then *Credentials*. 
+
+. From the *Organization credentials* page, select *Add credentials*. 
+
+. Select *Amazon Web Services*, then *FSx for ONTAP*, and then *Next*. 
++
+You're now on the *Add Credentials* page in NetApp Workloads.
+
+. Select *Add manually* and then follow the steps below to fill out the three sections under _Permissions configuration_. 
+
+=== Step 1: Select the storage capability and create the IAM policy
+
+In this section, you'll choose the storage capability to be managed as part of these credentials, and the permissions enabled for storage. You also have the option to select other workloads like Databases, GenAI, or VMware. Once you've made your selections, you'll need to copy the policy permissions for each selected workload from the Codebox and add them into the AWS Management Console within your AWS account to create the policies.
+
+.Steps
+
+. From the *Create policies* section, enable each of the workload capabilities that you want to include in these credentials. Enable *Storage* to create and manage file systems. 
++
+You can add additional capabilities later, so just select the workloads that you currently want to deploy and manage.
+
+. For those workload capabilities that offer a choice of permission levels (read-only or read/write), select the type of permissions that will be available with these credentials. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[Learn about the permissions, also known as operational modes^]. 
+
+. Optional: Select *Enable automatic permissions check* to check if you have the required AWS account permissions to complete workload operations. Enabling the check adds the `iam:SimulatePrincipalPolicy permission` to your permission policies. The purpose of this permission is to confirm permissions only. You can remove the permission after adding credentials, but we recommend keeping it to prevent resource creation for partially successful operations and to save you from any required manual resource cleanup.
+
+. In the Codebox window, copy the permissions for the first IAM policy.
++
+The storage permissions can also be copied from the following tabs. 
++
+[role="tabbed-block"]
+====
+
+.Read-only permissions
+--
+[source,json]
+----
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "fsx:Describe*",
+        "fsx:ListTagsForResource",
+        "ec2:Describe*",
+        "kms:Describe*",
+        "elasticfilesystem:Describe*",
+        "kms:List*",
+        "cloudwatch:GetMetricData",
+        "cloudwatch:GetMetricStatistics"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:SimulatePrincipalPolicy"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+----
+--
+.Read/Write permissions
+--
+[source,json]
+----
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "fsx:*",
+        "ec2:Describe*",
+        "ec2:CreateTags",
+        "ec2:CreateSecurityGroup",
+        "iam:CreateServiceLinkedRole",
+        "kms:Describe*",
+        "elasticfilesystem:Describe*",
+        "kms:List*",
+        "kms:CreateGrant",
+        "cloudwatch:PutMetricData",
+        "cloudwatch:GetMetricData",
+        "cloudwatch:GetMetricStatistics"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ec2:AuthorizeSecurityGroupEgress",
+        "ec2:AuthorizeSecurityGroupIngress",
+        "ec2:RevokeSecurityGroupEgress",
+        "ec2:RevokeSecurityGroupIngress",
+        "ec2:DeleteSecurityGroup"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringLike": {
+          "ec2:ResourceTag/AppCreator": "NetappFSxWF"
+        }
+      }
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:SimulatePrincipalPolicy"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+----
+--
+====
+
+. Open another browser window and log in to your AWS account in the AWS Management Console.
+
+. Open the IAM service, and then select *Policies* > *Create Policy*.
+
+. Select JSON as the file type, paste the permissions you copied in step 3, and select *Next*.
+
+. Enter the name for the policy and select *Create Policy*.
+
+. If you've selected multiple workload capabilities in step 1, repeat these steps to create a policy for each set of workload permissions.
+
+=== Step 2: Create the IAM role that uses the policies
+
+In this section you'll set up an IAM role that Workload Factory will assume that includes the permissions and policies that you just created.
+
+.Steps
+
+. In the AWS Management Console, select *Roles > Create Role*.
+
+. Under *Trusted entity type*, select *AWS account*.
+
+.. Select *Another AWS account* and copy and paste the account ID for FSx for ONTAP workload management from the Workloads user interface.
+.. Select *Required external ID* and copy and paste the external ID from the Workloads user interface.
+
+. Select *Next*.
+
+. In the Permissions policy section, choose all the policies that you defined previously and select *Next*.
+
+. Enter a name for the role and select *Create role*.
+
+. Copy the Role ARN.
+
+. Return to the Workloads Add credentials page, expand the *Create role* section, and paste the ARN in the _Role ARN_ field.
+
+=== Step 3: Enter a name and add the credentials
+
+The final step is to enter a name for the credentials in Workloads.
+
+.Steps
+
+. From the Workloads Add credentials page, expand *Credentials name*.
+
+. Enter the name that you want to use for these credentials.
+
+. Select *Add* to create the credentials.
+
+.Result
+
+The credentials are created and viewable on the Credentials page. You can now use the credentials when creating an FSx for ONTAP working environment. Whenever required, you can rename credentials or remove them from the NetApp Console.
+
+== Add credentials to an account using CloudFormation
+
+You can add AWS credentials to Workloads using an AWS CloudFormation stack by selecting the workload capabilities that you want to use, and then launching the AWS CloudFormation stack in your AWS account. CloudFormation will create the IAM policies and IAM role based on the workload capabilities you selected.
+
+.Before you begin
+
+* You'll need to have credentials to log in to your AWS account.
+* You'll need to have the following permissions in your AWS account when adding credentials using a CloudFormation stack:
++
+[source,json]
+----
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "cloudformation:CreateStack",
+        "cloudformation:UpdateStack",
+        "cloudformation:DeleteStack",
+        "cloudformation:DescribeStacks",
+        "cloudformation:DescribeStackEvents",
+        "cloudformation:DescribeChangeSet",
+        "cloudformation:ExecuteChangeSet",
+        "cloudformation:ListStacks",
+        "cloudformation:ListStackResources",
+        "cloudformation:GetTemplate",
+        "cloudformation:ValidateTemplate",
+        "lambda:InvokeFunction",
+        "iam:PassRole",
+        "iam:CreateRole",
+        "iam:UpdateAssumeRolePolicy",
+        "iam:AttachRolePolicy",
+        "iam:CreateServiceLinkedRole"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+----
+
+.Steps
+
+. From the NetApp Console menu, select *Administration* and then *Credentials*. 
+
+. Select *Add credentials*. 
+
+. Select *Amazon Web Services*, then *FSx for ONTAP*, and then *Next*.
++
+You're now on the *Add Credentials* page in NetApp Workloads.
+
+. Select *Add via AWS CloudFormation*.
+
+. Under *Create policies*, enable each of the workload capabilities that you want to include in these credentials and choose a permission level for each workload.
++
+You can add additional capabilities later, so just select the workloads that you currently want to deploy and manage.
+
+. Optional: Select *Enable automatic permissions check* to check if you have the required AWS account permissions to complete workload operations. Enabling the check adds the `iam:SimulatePrincipalPolicy` permission to your permission policies. The purpose of this permission is to confirm permissions only. You can remove the permission after adding credentials, but we recommend keeping it to prevent resource creation for partially successful operations and to save you from any required manual resource cleanup. 
+
+. Under *Credentials name*, enter the name that you want to use for these credentials.
+
+. Add the credentials from AWS CloudFormation:
+
+.. Select *Add* (or select *Redirect to CloudFormation*) and the Redirect to CloudFormation page is displayed.
+
+.. If you use single sign-on (SSO) with AWS, open a separate browser tab and log in to the AWS Console before you select *Continue*.
++
+You should log in to the AWS account where the FSx for ONTAP file system resides.
+
+.. Select *Continue* from the Redirect to CloudFormation page.
+
+.. On the Quick create stack page, under Capabilities, select *I acknowledge that AWS CloudFormation might create IAM resources*.
+
+.. Select *Create stack*.
+
+.. Return to *Administration* > *Credentials* page from the main menu to verify that the new credentials are in progress, or that they have been added.
+
+.Result
+
+The credentials are created and viewable on the Credentials page. You can now use the credentials when creating an FSx for ONTAP working environment. Whenever required, you can rename credentials or remove them from the NetApp Console.

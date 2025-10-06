@@ -1,0 +1,5 @@
+=== Add a storage VM
+You can now add a storage VM to the Amazon FSx for NetApp ONTAP file system using BlueXP. 
+
+=== **My Opportunities** tab is now **My estate**
+The **My Opportunities** tab is now **My estate**. The documentation is updated to reflect the new name. 

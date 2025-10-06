@@ -1,0 +1,86 @@
+---
+sidebar: sidebar
+permalink: use/task-manage-fsx-systems.html
+keywords: amazon fsx for netapp ontap, fsx, manage fsx for ontap system, delete fsx for ontap system, remove fsx for ontap system, throughput capacity, change throughput, automatic capacity management, capacity management, storage capacity, replication, classification, sync, backup, recovery, bluexp, NetApp Console
+summary: After you create or discover an FSx for ONTAP system in NetApp Console, you can manage the file system and use NetApp data services that provide capabilities like backup and recovery.
+---
+
+= Manage an FSx for ONTAP file system in the NetApp Console
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+After you create or discover an FSx for ONTAP system in the NetApp Console, you can manage the file system by creating volumes, managing storage VMs, protecting data, and administering the file system. The Console also enables you to use data services that provide capabilities like backup and recovery, data classification, data synchronization, and more.
+
+== Manage a file system using NetApp Workloads
+
+When you open an FSx for ONTAP system from the NetApp Console Systems page, you're brought to NetApp Workloads. Workloads is an intelligent optimization and automation service that uses industry best practices to design, set up, and operate key workloads using Amazon FSx for NetApp ONTAP.
+
+https://docs.netapp.com/us-en/workload-fsx-ontap/index.html[Learn how to manage a file system using NetApp Workloads^]
+
+== Manage a file system using ONTAP System Manager
+
+You can manage an FSx for ONTAP file system directly from the Console by using the ONTAP System Manager interface. A Console agent is required to use System Manager.
+
+== Manage a file system using Amazon CloudFormation
+
+You can provision and manage FSx for ONTAP file system resources (volumes, CIFS shares, export policies, and more) using Amazon CloudFormation. 
+
+link:https://github.com/NetApp/NetApp-CloudFormation-FSx-ONTAP-provider[NetApp CloudFormation FSx for ONTAP provider GitHub repository^]
+
+== Use NetApp data services with a file system
+
+Use NetApp data services with your FSx for ONTAP file systems to back up and recover your data, transfer and synchronize data, scan and classify your data, replicate data, and speed up access or offload traffic.
+
+=== Back up and recover your data
+
+NetApp Backup and Recovery provides efficient, secure, and cost-effective data protection for NetApp ONTAP data, databases, and virtual machines, both on-premises and in the cloud.
+
+link:https://docs.netapp.com/us-en/data-services-backup-recovery/index.html[Get started with NetApp Backup and Recovery^]
+
+=== Transfer and synchronize data
+
+NetApp Copy and Sync is a cloud replication and synchronization service for transferring NAS data between on-premises and cloud object stores.
+
+link:https://docs.netapp.com/us-en/data-services-copy-sync/task-quick-start.html[Get started with NetApp Copy and Sync^]
+
+=== Scan and classify your data
+
+NetApp Data Classification enables you to scan and classify data across your organization's hybrid multicloud.
+
+link:https://docs.netapp.com/us-en/data-services-data-classification/index.html[Get started with NetApp Data Classification^]
+
+=== Replicate data
+
+Replicate data to support backup and disaster recovery. Data replication between an FSx for ONTAP file system and Cloud Volumes ONTAP, or an FSx for ONTAP file system and on-premises ONTAP system can be accomplished using NetApp Replication. Replication enables you to replicate data between ONTAP storage systems to support backup and disaster recovery to the cloud or between clouds.  
+
+link:https://docs.netapp.com/us-en/data-services-replication/task-replicating-data.html[Get started with NetApp Replication^]
+
+Data replication between two FSx for ONTAP file systems is possible from the NetApp Console Systems page.
+
+.Before you begin
+Consider the following before you begin. 
+
+* To replicate data between two FSx for ONTAP file systems, you must select a Connector with connectivity to the file system or enter the file system to associate a link. 
+* Replication isn't supported for volumes in a state other than available, created, or misconfigured, and when then ONTAP version isn't compatible.
+
+.Steps
+. From the NetApp Console Systems page, drag the source FSx for ONTAP file system on top of the target FSx for ONTAP file system and select *Replication*. 
+. On the Create replication page, select source volumes to replicate and then *Next*.
+. Under Replication target, provide the following:  
+.. *Target name*: The target name was selected previously during the drag and drop operation in the canvas.  
+
+include::https://raw.githubusercontent.com/NetAppDocs/workload-fsx-ontap/main/_include/create-replication.adoc[]
+
+[start=5]
+//Rachel L: Added a hack to make the last step have a numbered step in the right order.
+. Select *Create*. 
+
+=== Speed up access or offload traffic
+
+NetApp Volume Caching provides a persistent, writable volume in a remote place. You can use Volume Caching to speed up access to data or to offload traffic from heavily accessed volumes.
+
+link:https://docs.netapp.com/us-en/console-volume-caching/get-started/cache-intro.html[Get started with NetApp Volume Caching^]

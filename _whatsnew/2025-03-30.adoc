@@ -1,0 +1,4 @@
+=== iam:SimulatePermissionPolicy permission update
+Now you can manage the `iam:SimulatePrincipalPolicy` permission from the BlueXP console when you add additional AWS account credentials or add a new workload capability such as the GenAI workload. 
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html#change-log[Permissions reference change log^]

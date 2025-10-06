@@ -1,0 +1,4 @@
+---
+permalink: use/task-manage-working-environments.html
+redirect: console-fsx-ontap/use/task-manage-fsx-systems.html
+---
