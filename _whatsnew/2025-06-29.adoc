@@ -2,4 +2,4 @@
 
 After you set up credentials and permissions for your FSx for ONTAP file system, you'll be redirected to the BlueXP Credentials page. From this page, you can rename or remove your FSx for ONTAP credentials.
 
-link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html[Set up permissions for FSx for ONTAP file systems]
+link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html[Set up permissions for FSx for ONTAP file systems]
