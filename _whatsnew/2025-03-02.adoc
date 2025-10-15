@@ -1,4 +1,4 @@
 === CloudShell events in Tracker
 Anytime you use CloudShell to execute FSx for ONTAP operations from BlueXP Workloads, the events appear in Tracker.
 
-link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-monitor-operations.html[Learn how to monitor and track FSx for ONTAP operations in BlueXP^]
+link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-monitor-operations.html[Learn how to monitor and track FSx for ONTAP operations in BlueXP]

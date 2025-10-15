@@ -60,9 +60,6 @@ include::_whatsnew/2023-07-02.adoc[]
 == 04 June 2023
 include::_whatsnew/2023-06-04.adoc[]
 
-== 04 June 2023
-include::_whatsnew/2023-06-04.adoc[]
-
 == 07 May 2023
 === Generate a security group
 When creating a working environment, you can now have BlueXP link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-create-fsx-system.html[generate a security group] that allows traffic within the selected VPC only. This feature link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html[requires additional permissions]. 

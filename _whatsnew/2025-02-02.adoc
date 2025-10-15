@@ -6,12 +6,12 @@ If you have existing FSx for ONTAP file systems that are not associated with a w
 === File system removal from BlueXP canvas 
 You can now remove an FSx for ONTAP file system from a workspace in the BlueXP canvas. This operation dissociates the file system from one workspace so that you can associate it with another workspace within the same BlueXP account. 
 
-link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-remove-filesystem.html[Learn how to remove an FSx for ONTAP file system from a workspace in BlueXP^]
+link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-remove-filesystem.html[Learn how to remove an FSx for ONTAP file system from a workspace in BlueXP]
 
 === Tracker available for monitoring and tracking operations
 Tracker, a new monitoring capability, is available in BlueXP Amazon FSx for NetApp ONTAP. You can use Tracker to monitor and track the progress and status of credentials, storage, and link operations, review details for operation tasks and subtasks, diagnose any issues or failures, edit parameters for failed operations, and retry failed operations.
 
-link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-monitor-operations.html[Learn how to monitor and track FSx for ONTAP operations in BlueXP^]
+link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-monitor-operations.html[Learn how to monitor and track FSx for ONTAP operations in BlueXP]
 
 === CloudShell available in BlueXP Workloads
 
