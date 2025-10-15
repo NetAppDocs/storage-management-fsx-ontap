@@ -60,12 +60,9 @@ include::_whatsnew/2023-07-02.adoc[]
 == 04 June 2023
 include::_whatsnew/2023-06-04.adoc[]
 
-== 04 June 2023
-include::_whatsnew/2023-06-04.adoc[]
-
 == 07 May 2023
 === Generate a security group
-When creating a working environment, you can now have BlueXP link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-creating-fsx-working-environment.html#create-an-amazon-fsx-for-netapp-ontap-working-environment[generate a security group] that allows traffic within the selected VPC only. This feature link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html[requires additional permissions]. 
+When creating a working environment, you can now have BlueXP link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-create-fsx-system.html[generate a security group] that allows traffic within the selected VPC only. This feature link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html[requires additional permissions]. 
 
 === Add or modify tags
 You can optionally add and modify tags to categorize volumes. 
@@ -80,20 +77,20 @@ User interface improvements have been made and screenshots have been updated in 
 
 == 01 January 2023
 === Automatic capacity management
-You can now choose to enable link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-manage-working-environment.html#manage-automatic-capacity[automatic capacity management] to add incremental storage based on demand. Automatic capacity management polls the cluster at regular intervals to assess demand and automatically increases storage capacity in increments of 10% up to 80% of the cluster's maximum capacity.
+You can now choose to enable link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-manage-fsx-systems.html[automatic capacity management] to add incremental storage based on demand. Automatic capacity management polls the cluster at regular intervals to assess demand and automatically increases storage capacity in increments of 10% up to 80% of the cluster's maximum capacity.
 
 == 18 September 2022
 === Change storage capacity and IOPS
-You can now link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-manage-working-environment.html#change-storage-capacity-and-IOPS[change the storage capacity and IOPS] at any time after you create the FSx for ONTAP working environment. 
+You can now link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-manage-fsx-systems.html[change the storage capacity and IOPS] at any time after you create the FSx for ONTAP working environment. 
 
 == 31 July 2022
 === *My estate* feature
 If you previously provided your AWS credentials to Cloud Manager, the new *My estate* feature can automatically discover and suggest FSx for ONTAP file systems to add and manage using Cloud Manager. You can also review available data services through the *My estate* tab. 
 
-link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-creating-fsx-working-environment.html#discover-an-existing-fsx-for-ontap-file-system[Discover FSx for ONTAP using My estate]
+link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-create-fsx-system.html#discover-an-existing-fsx-for-ontap-file-system[Discover FSx for ONTAP using My estate]
 
 === Change throughput capacity
-You can now link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-manage-working-environment.html#change-throughput-capacity[change throughput capacity] at any time after you create the FSx for ONTAP working environment.
+You can now link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-manage-fsx-systems.html[change throughput capacity] at any time after you create the FSx for ONTAP working environment.
 
 === Replicate and sync data
 You can now replicate and sync data to on-premises and other FSx for ONTAP systems using FSx for ONTAP as the source. 
@@ -105,18 +102,18 @@ You can now create iSCSI volumes in FSx for ONTAP using Cloud Manager.
 === Support for single or multiple Availability Zon
 You can now select a single or multiple Availability Zone HA deployment model.
 
-link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-creating-fsx-working-environment.html#create-an-amazon-fsx-for-ontap-working-environment[Create an FSx for ONTAP working environment]
+link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-create-fsx-system.html[Create an FSx for ONTAP working environment]
 
 === Support for GovCloud account authentication
 AWS GovCloud account authentication is now supported in Cloud Manager. 
 
-link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html#set-up-the-iam-role[Set up the IAM role]
+link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html#set-up-the-iam-role[Set up the IAM role]
 
 == 27 February 2022
 === Assume IAM role
 When you create an FSx for ONTAP working environment, you now must provide the ARN of an IAM role that Cloud Manager can assume to create an FSx for ONTAP working environment. You previously needed to provide AWS access keys.
 
-link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html[Learn how to set up permissions for FSx for ONTAP].
+link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html[Learn how to set up permissions for FSx for ONTAP].
 
 == 31 October 2021
 === Create iSCSI volumes using Cloud Manager API
@@ -137,12 +134,12 @@ Now you can edit FSx for ONTAP volumes using Cloud Manager.
 
 * link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html[Amazon FSx for NetApp ONTAP^] is a fully managed service allowing customers to launch and run file systems powered by NetApp’s ONTAP storage operating system. FSx for ONTAP provides the same features, performance, and administrative capabilities NetApp customers use on premises, with the simplicity, agility, security, and scalability of a native AWS service.
 +
-link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/start/concept-fsx-aws.html[Learn about Amazon FSx for NetApp ONTAP].
+link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/start/concept-fsx-aws.html[Learn about Amazon FSx for NetApp ONTAP].
 
 * You can configure an FSx for ONTAP working environment in Cloud Manager.
 +
-link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-creating-fsx-working-environment.html[Create an Amazon FSx for NetApp ONTAP working environment].
+link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-create-fsx-system.html[Create an Amazon FSx for NetApp ONTAP working environment].
 
 * Using a Connector in AWS and Cloud Manager, you can create and manage volumes, replicate data, and integrate FSx for ONTAP with NetApp cloud services, such as Data Sense and Cloud Sync.
 +
-link:https://docs.netapp.com/us-en/bluexp-classification/task-scanning-fsx.html[Get started with Cloud Data Sense for Amazon FSx for NetApp ONTAP^].
+link:https://docs.netapp.com/us-en/data-services-data-classification/task-scanning-fsx.html[Get started with Cloud Data Sense for Amazon FSx for NetApp ONTAP^].
