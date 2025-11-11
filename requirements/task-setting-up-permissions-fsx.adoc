@@ -13,7 +13,7 @@ summary: To create or manage an FSx for ONTAP working environment, you need to a
 :imagesdir: ../media/
 
 [.lead]
-To create or manage an FSx for ONTAP working environment, you need to add AWS credentials in the NetApp Console by providing the ARN of an IAM role that gives the permissions needed to create an FSx for ONTAP system from the NetApp Console.
+To create or manage an FSx for ONTAP file system, you need to add AWS credentials in the NetApp Console by providing the ARN of an IAM role that gives the permissions needed to create an FSx for ONTAP system from the NetApp Console.
 
 == Why AWS credentials are required
 
@@ -24,7 +24,7 @@ Credentials and permissions are managed via NetApp Workload Factory. Workload Fa
 The Workload Factory interface provides FSx for ONTAP users with options to enable workload capabilities like Storage, VMware, Databases, and GenAI, and to select permissions for the workloads. _Storage_ is the storage management capability in Workload Factory and it is the only capability you need to enable and add credentials for to create and manage your FSx for ONTAP file systems. 
 
 == About this task 
-When adding new credentials for FSx for ONTAP from Storage in Workload Factory, you'll need to decide which level of permissions, or _operational mode_, you'd like to operate in. To discover and deploy AWS resources like FSx for ONTAP file systems, you'll need _read-only_ or _read/write_ permissions. FSx for ONTAP will operate in _basic_ mode unless you select _read-only_ mode or _read/write_ mode. _Read-only_ are the same as view permissions. _Read/Write_ are the same as operate permissions. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[Learn more about operational modes]. 
+When adding new credentials for FSx for ONTAP from Storage in Workload Factory, you'll need to decide which permission policies you'd like to grant. To discover AWS resources like FSx for ONTAP file systems, you'll need _view, planning, and analysis_ permissions. To deploy FSx for ONTAP file systems, you'll need _file system creation and deletion_ permissions. You can do basic operations for FSx for ONTAP without permissions. link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html[Learn more about permissions]. 
 
 New and existing AWS credentials are viewable from the Administration menu on the *Credentials* page. 
 
@@ -73,102 +73,11 @@ In this section, you'll choose the storage capability to be managed as part of t
 +
 You can add additional capabilities later, so just select the workloads that you currently want to deploy and manage.
 
-. For those workload capabilities that offer a choice of permission levels (read-only or read/write), select the type of permissions that will be available with these credentials. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[Learn about the permissions, also known as operational modes^]. 
+. For those workload capabilities that offer a choice of permission policies, select the type of permissions that will be available with these credentials. link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html[Learn about the permissions^]. 
 
 . Optional: Select *Enable automatic permissions check* to check if you have the required AWS account permissions to complete workload operations. Enabling the check adds the `iam:SimulatePrincipalPolicy permission` to your permission policies. The purpose of this permission is to confirm permissions only. You can remove the permission after adding credentials, but we recommend keeping it to prevent resource creation for partially successful operations and to save you from any required manual resource cleanup.
 
 . In the Codebox window, copy the permissions for the first IAM policy.
-+
-The storage permissions can also be copied from the following tabs. 
-+
-[role="tabbed-block"]
-====
-
-.Read-only permissions
---
-[source,json]
-----
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": [
-        "fsx:Describe*",
-        "fsx:ListTagsForResource",
-        "ec2:Describe*",
-        "kms:Describe*",
-        "elasticfilesystem:Describe*",
-        "kms:List*",
-        "cloudwatch:GetMetricData",
-        "cloudwatch:GetMetricStatistics"
-      ],
-      "Resource": "*"
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "iam:SimulatePrincipalPolicy"
-      ],
-      "Resource": "*"
-    }
-  ]
-}
-----
---
-.Read/Write permissions
---
-[source,json]
-----
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": [
-        "fsx:*",
-        "ec2:Describe*",
-        "ec2:CreateTags",
-        "ec2:CreateSecurityGroup",
-        "iam:CreateServiceLinkedRole",
-        "kms:Describe*",
-        "elasticfilesystem:Describe*",
-        "kms:List*",
-        "kms:CreateGrant",
-        "cloudwatch:PutMetricData",
-        "cloudwatch:GetMetricData",
-        "cloudwatch:GetMetricStatistics"
-      ],
-      "Resource": "*"
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "ec2:AuthorizeSecurityGroupEgress",
-        "ec2:AuthorizeSecurityGroupIngress",
-        "ec2:RevokeSecurityGroupEgress",
-        "ec2:RevokeSecurityGroupIngress",
-        "ec2:DeleteSecurityGroup"
-      ],
-      "Resource": "*",
-      "Condition": {
-        "StringLike": {
-          "ec2:ResourceTag/AppCreator": "NetappFSxWF"
-        }
-      }
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "iam:SimulatePrincipalPolicy"
-      ],
-      "Resource": "*"
-    }
-  ]
-}
-----
---
-====
 
 . Open another browser window and log in to your AWS account in the AWS Management Console.
 

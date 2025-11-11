@@ -55,20 +55,20 @@ link:https://docs.netapp.com/us-en/data-services-data-classification/index.html[
 
 === Replicate data
 
-Replicate data to support backup and disaster recovery. Data replication between an FSx for ONTAP file system and Cloud Volumes ONTAP, or an FSx for ONTAP file system and on-premises ONTAP system can be accomplished using NetApp Replication. Replication enables you to replicate data between ONTAP storage systems to support backup and disaster recovery to the cloud or between clouds.  
+Replicate data to support backup and disaster recovery. Data replication between an FSx for ONTAP file system and Cloud Volumes ONTAP can be accomplished using NetApp Replication. Replication enables you to replicate data between ONTAP storage systems to support backup and disaster recovery to the cloud or between clouds.  
 
 link:https://docs.netapp.com/us-en/data-services-replication/task-replicating-data.html[Get started with NetApp Replication^]
 
-Data replication between two FSx for ONTAP file systems is possible from the NetApp Console Systems page.
+Data replication between two FSx for ONTAP file systems and between an on-premises ONTAP system and an FSx for ONTAP file system is possible from the NetApp Console systems page.
 
 .Before you begin
 Consider the following before you begin. 
 
-* To replicate data between two FSx for ONTAP file systems, you must select a Connector with connectivity to the file system or enter the file system to associate a link. 
+* To replicate data between two FSx for ONTAP file systems or between an on-premises ONTAP system and an FSx for ONTAP file system, you must select a Console agent with connectivity to the file system or enter the file system to associate a link. 
 * Replication isn't supported for volumes in a state other than available, created, or misconfigured, and when then ONTAP version isn't compatible.
 
 .Steps
-. From the NetApp Console Systems page, drag the source FSx for ONTAP file system on top of the target FSx for ONTAP file system and select *Replication*. 
+. From the NetApp Console Systems page, drag the source FSx for ONTAP file system or on-premises ONTAP system on top of the target FSx for ONTAP file system and select *Replication*. 
 . On the Create replication page, select source volumes to replicate and then *Next*.
 . Under Replication target, provide the following:  
 .. *Target name*: The target name was selected previously during the drag and drop operation in the canvas.  
