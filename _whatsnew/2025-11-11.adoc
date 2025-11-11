@@ -1,0 +1,5 @@
+=== Support for replication between on-premises ONTAP systems and FSx for ONTAP file systems
+
+Data replication is available between an on-premises ONTAP system and an FSx for ONTAP file system from FSx for ONTAP within the NetApp Console.
+
+link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-manage-fsx-systems.html#replicate-data[Replicate data]
