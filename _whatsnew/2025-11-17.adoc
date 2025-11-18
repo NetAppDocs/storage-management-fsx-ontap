@@ -1,0 +1,3 @@
+=== System Manager available when using an AWS Lambda link
+
+The ONTAP System Manager interface can be used with an AWS Lambda link to perform advanced ONTAP operations. This provides an alternative to using a Console agent with System Manager for managing an FSx for ONTAP file system directly from the Console. link:https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html[Learn about using links for advanced ONTAP operations^]
