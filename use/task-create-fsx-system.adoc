@@ -46,6 +46,7 @@ Quick create enables you to use a recommended best-practice configuration. You c
 . Select *Add system* from the Systems page. 
 . Select *Amazon Web Services* as the location, and then select *Add new* for Amazon FSx for NetApp ONTAP. 
 include::https://raw.githubusercontent.com/NetAppDocs/workload-fsx-ontap/main/_include/create-file-system-quick-create.adoc[]
+//include comes from workload-fsx-ontap-internal repo
 
 .Result
 If you created the file system, the new FSx for ONTAP configuration appears on the Systems page. 
@@ -62,7 +63,7 @@ With Advanced create, you set all of the configuration options, including availa
 . Select *Add system* from the Systems page. 
 . Select *Amazon Web Services* as the location, and then select *Add new* for Amazon FSx for NetApp ONTAP. 
 include::https://raw.githubusercontent.com/NetAppDocs/workload-fsx-ontap/main/_include/create-file-system-advanced-create.adoc[]
-
+//include comes from workload-fsx-ontap-internal repo
 .Result
 
 If you created the file system, the new FSx for ONTAP configuration appears on the Systems page. 
