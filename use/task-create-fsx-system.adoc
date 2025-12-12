@@ -188,6 +188,8 @@ You can discover an FSx for ONTAP file system only once within an account and at
 * If you select an un-named cluster, you will receive a prompt to enter a name for the cluster.
 
 * If you select a cluster that doesn't have the credentials required to manage the FSx for ONTAP file system from the Console, you'll receive a prompt to select credentials with the required permissions. 
+
+* The following regions aren't supported for discovery: China regions, GovCloud (US) regions, Secret Cloud, and Top Secret Cloud.
 ===============================
 
 .Result
