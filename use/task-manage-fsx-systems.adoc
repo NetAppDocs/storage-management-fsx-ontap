@@ -57,16 +57,12 @@ link:https://docs.netapp.com/us-en/data-services-data-classification/index.html[
 
 === Replicate data
 
-Replicate data to support backup and disaster recovery. Data replication between an FSx for ONTAP file system and Cloud Volumes ONTAP can be accomplished using NetApp Replication. Replication enables you to replicate data between ONTAP storage systems to support backup and disaster recovery to the cloud or between clouds.  
-
-link:https://docs.netapp.com/us-en/data-services-replication/task-replicating-data.html[Get started with NetApp Replication^]
-
-Data replication between two FSx for ONTAP file systems and between an on-premises ONTAP system and an FSx for ONTAP file system is possible from the NetApp Console systems page.
+Replicate data to support backup and disaster recovery. Data replication is supported between FSx for ONTAP and on-premises ONTAP systems and Cloud Volumes ONTAP. 
 
 .Before you begin
 Consider the following before you begin. 
 
-* To replicate data between two FSx for ONTAP file systems or between an on-premises ONTAP system and an FSx for ONTAP file system, you must select a Console agent with connectivity to the file system or enter the file system to associate a link. 
+* To replicate data between FSx for ONTAP and on-premises ONTAP or Cloud Volumes ONTAP, you must select a Console agent with connectivity to the file system or enter the file system to associate a link. 
 * Replication isn't supported for volumes in a state other than available, created, or misconfigured, and when then ONTAP version isn't compatible.
 
 .Steps
