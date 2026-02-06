@@ -66,7 +66,7 @@ Consider the following before you begin.
 * Replication isn't supported for volumes in a state other than available, created, or misconfigured, and when then ONTAP version isn't compatible.
 
 .Steps
-. From the NetApp Console Systems page, drag the source FSx for ONTAP file system or on-premises ONTAP system on top of the target FSx for ONTAP file system and select *Replication*. 
+. From the NetApp Console Systems page, drag the source FSx for ONTAP file system, on-premises ONTAP system, or Cloud Volumes ONTAP system on top of the target FSx for ONTAP file system and select *Replication*. 
 . On the Create replication page, select source volumes to replicate and then *Next*.
 . Under Replication target, provide the following:  
 .. *Target name*: The target name was selected previously during the drag and drop operation in the canvas.  
