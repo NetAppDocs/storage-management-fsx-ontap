@@ -1,0 +1,37 @@
+---
+sidebar: sidebar
+permalink: use/task-replicate-data.html
+keywords: amazon fsx for netapp ontap, fsx, manage fsx for ontap system, delete fsx for ontap system, remove fsx for ontap system, throughput capacity, change throughput, automatic capacity management, capacity management, storage capacity, replication, classification, sync, backup, recovery, bluexp, NetApp Console
+summary: After you create or discover an FSx for ONTAP system in NetApp Console, you can manage the file system and use NetApp data services that provide capabilities like backup and recovery.
+---
+
+= Replicate FSx for ONTAP data in the NetApp Console
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Replicate data to protect against data loss if the region where your data resides experiences a disaster. Data replication is supported between FSx for ONTAP file systems and on-premises ONTAP systems or Cloud Volumes ONTAP. 
+
+.About this task
+
+This operation creates a replication relationship for source volumes in an FSx for ONTAP file system, on-premises ONTAP system, or Cloud Volumes ONTAP system. 
+
+Replicated volumes in the target file system are data protection (DP) volumes and follow the naming format: `{OriginalVolumeName}_copy`. 
+
+.Before you begin
+Consider the following before you begin. 
+
+* To replicate data between FSx for ONTAP and on-premises ONTAP or Cloud Volumes ONTAP, you must select a Console agent with connectivity to the file system or enter the file system to associate a link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html[Learn about using links^]
+* Replication isn't supported for volumes in a state other than available, created, or misconfigured, and when the ONTAP version isn't compatible.
+
+.Steps
+. From the NetApp Console Systems page, drag the source FSx for ONTAP file system, on-premises ONTAP system, or Cloud Volumes ONTAP system on top of the target FSx for ONTAP file system and select *Replication*. 
+. On the Create replication page, select source volumes to replicate and then *Next*.
+. Under Replication target, provide the following:  
+.. *Target name*: You applied the target name when you dragged and dropped the source storage system on the target system in the Console Systems page. 
+
+include::https://raw.githubusercontent.com/NetAppDocs/workload-fsx-ontap/main/_include/create-replication.adoc[]
+
+[start=5]
+//Rachel L: Added a hack to make the last step have a numbered step in the right order.
+. Select *Create*. 

@@ -55,28 +55,6 @@ NetApp Data Classification enables you to scan and classify data across your org
 
 link:https://docs.netapp.com/us-en/data-services-data-classification/index.html[Get started with NetApp Data Classification^]
 
-=== Replicate data
-
-Replicate data to support backup and disaster recovery. Data replication is supported between FSx for ONTAP file systems and on-premises ONTAP systems or Cloud Volumes ONTAP. 
-
-.Before you begin
-Consider the following before you begin. 
-
-* To replicate data between FSx for ONTAP and on-premises ONTAP or Cloud Volumes ONTAP, you must select a Console agent with connectivity to the file system or enter the file system to associate a link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html[Learn about using links^]
-* Replication isn't supported for volumes in a state other than available, created, or misconfigured, and when the ONTAP version isn't compatible.
-
-.Steps
-. From the NetApp Console Systems page, drag the source FSx for ONTAP file system, on-premises ONTAP system, or Cloud Volumes ONTAP system on top of the target FSx for ONTAP file system and select *Replication*. 
-. On the Create replication page, select source volumes to replicate and then *Next*.
-. Under Replication target, provide the following:  
-.. *Target name*: The target name was applied when you dragged and dropped the source system on the target system in the Console Systems page. 
-
-include::https://raw.githubusercontent.com/NetAppDocs/workload-fsx-ontap/main/_include/create-replication.adoc[]
-
-[start=5]
-//Rachel L: Added a hack to make the last step have a numbered step in the right order.
-. Select *Create*. 
-
 === Speed up access or offload traffic
 
 NetApp Volume Caching provides a persistent, writable volume in a remote place. You can use Volume Caching to speed up access to data or to offload traffic from heavily accessed volumes.

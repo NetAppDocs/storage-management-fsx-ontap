@@ -2,4 +2,4 @@
 
 Data replication is now available between a Cloud Volumes ONTAP system and an FSx for ONTAP file system from the NetApp Console.
 
-link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-manage-fsx-systems.html#replicate-data[Replicate data]
+link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-replicate-data.html[Replicate data]
