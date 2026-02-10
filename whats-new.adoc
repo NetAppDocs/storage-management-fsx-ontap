@@ -14,6 +14,10 @@ summary: Learn what's new in Amazon FSx for NetApp ONTAP.
 [.lead]
 Learn what's new in FSx for ONTAP.
 
+== 09 February 2026
+
+include::_whatsnew/2026-02-09.adoc[]
+
 == 17 November 2025
 
 include::_whatsnew/2025-11-17.adoc[]
