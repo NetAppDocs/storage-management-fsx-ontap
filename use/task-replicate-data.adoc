@@ -98,4 +98,4 @@ include::https://raw.githubusercontent.com/NetAppDocs/workload-fsx-ontap/main/_i
 . Select *Cut over*.
 
 .Result
-After cutover, the source volumes are deleted and the target volumes become read/write. You can link:change-tiering-policy.html[modify the tiering policy] for the target volume(s) after cutover.
+After cutover, the source volumes are deleted and the target volumes become read/write. You can link:https://docs.netapp.com/us-en/workload-fsx-ontap/change-tiering-policy.html[modify the tiering policy] for the target volume(s) after cutover.
