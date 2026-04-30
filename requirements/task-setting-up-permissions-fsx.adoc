@@ -43,9 +43,9 @@ There are three parts to creating the credentials:
 
 * Select the services and permissions level that you would like to use and then create IAM policies from the AWS Management Console.
 * Create an IAM role from the AWS Management Console.
-* From Workloads in the NetApp Console, enter a name and add the credentials.
+* Enter a name and add the credentials in the NetApp Console.
 
-To create or manage an FSx for ONTAP working environment, you need to add AWS credentials to Workloads in the NetApp Console by providing the ARN of an IAM role that gives Workloads the permissions needed to create an FSx for ONTAP working environment.
+To create or manage an FSx for ONTAP file system, you need to add AWS credentials in the NetApp Console by providing the ARN of an IAM role that gives Workload Factory the permissions needed to create an FSx for ONTAP file system.
 
 .Before you begin
 
@@ -58,8 +58,6 @@ You'll need to have credentials to log in to your AWS account.
 . From the *Organization credentials* page, select *Add credentials*. 
 
 . Select *Amazon Web Services*, then *FSx for ONTAP*, and then *Next*. 
-+
-You're now on the *Add Credentials* page in NetApp Workloads.
 
 . Select *Add manually* and then follow the steps below to fill out the three sections under _Permissions configuration_. 
 
@@ -99,8 +97,8 @@ In this section you'll set up an IAM role that Workload Factory will assume that
 
 . Under *Trusted entity type*, select *AWS account*.
 
-.. Select *Another AWS account* and copy and paste the account ID for FSx for ONTAP workload management from the Workloads user interface.
-.. Select *Required external ID* and copy and paste the external ID from the Workloads user interface.
+.. Select *Another AWS account* and copy and paste the account ID for FSx for ONTAP workload management from the Console user interface.
+.. Select *Required external ID* and copy and paste the external ID from *Workloads* in the NetApp Console user interface.
 
 . Select *Next*.
 
@@ -110,15 +108,15 @@ In this section you'll set up an IAM role that Workload Factory will assume that
 
 . Copy the Role ARN.
 
-. Return to the Workloads Add credentials page, expand the *Create role* section, and paste the ARN in the _Role ARN_ field.
+. Return to the Add credentials page in the NetApp Console, expand the *Create role* section, and paste the ARN in the _Role ARN_ field.
 
 === Step 3: Enter a name and add the credentials
 
-The final step is to enter a name for the credentials in Workloads.
+The final step is to enter a name for the credentials.
 
 .Steps
 
-. From the Workloads Add credentials page, expand *Credentials name*.
+. From the Add credentials page, expand *Credentials name*.
 
 . Enter the name that you want to use for these credentials.
 
@@ -126,11 +124,11 @@ The final step is to enter a name for the credentials in Workloads.
 
 .Result
 
-The credentials are created and viewable on the Credentials page. You can now use the credentials when creating an FSx for ONTAP working environment. Whenever required, you can rename credentials or remove them from the NetApp Console.
+The credentials are created and viewable on the Credentials page. You can now use the credentials when creating an FSx for ONTAP file system. Whenever required, you can rename credentials or remove them from the NetApp Console.
 
 == Add credentials to an account using CloudFormation
 
-You can add AWS credentials to Workloads using an AWS CloudFormation stack by selecting the workload capabilities that you want to use, and then launching the AWS CloudFormation stack in your AWS account. CloudFormation will create the IAM policies and IAM role based on the workload capabilities you selected.
+You can add AWS credentials to NetApp Workload Factory using an AWS CloudFormation stack by selecting the workload capabilities that you want to use, and then launching the AWS CloudFormation stack in your AWS account. CloudFormation will create the IAM policies and IAM role based on the workload capabilities you selected.
 
 .Before you begin
 
@@ -177,7 +175,7 @@ You can add AWS credentials to Workloads using an AWS CloudFormation stack by se
 
 . Select *Amazon Web Services*, then *FSx for ONTAP*, and then *Next*.
 +
-You're now on the *Add Credentials* page in NetApp Workloads.
+You're now on the *Add Credentials* page in NetApp Workload Factory.
 
 . Select *Add via AWS CloudFormation*.
 
@@ -207,4 +205,4 @@ You should log in to the AWS account where the FSx for ONTAP file system resides
 
 .Result
 
-The credentials are created and viewable on the Credentials page. You can now use the credentials when creating an FSx for ONTAP working environment. Whenever required, you can rename credentials or remove them from the NetApp Console.
+The credentials are created and viewable on the Credentials page. You can now use the credentials when creating an FSx for ONTAP file system. Whenever required, you can rename credentials or remove them from the NetApp Console.
