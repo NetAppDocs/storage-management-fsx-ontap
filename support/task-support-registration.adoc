@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: support/task-support-registration.html
-keywords: support registration, register for support, support, nss account, add nss account, NetApp Console, bluexp
+keywords: support registration, register for support, support, nss account, add nss account, NetApp Console
 summary: Before you can open a support case with NetApp technical support, you need to add a NetApp Support Site account to the NetApp Console and then register for support.
 ---
 

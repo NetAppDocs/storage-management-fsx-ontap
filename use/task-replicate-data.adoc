@@ -47,7 +47,7 @@ To migrate storage VM data and configuration settings, you must complete two ope
 2. <<Step 2: Initialize the replication relationship,Initialize the replication relationship>> to transfer the data from the source to the target storage system.
 3. <<Step 3: Cut over replication for migration use cases,Cut over replication for migration use cases>> to permanently migrate data and configuration settings from the source file system to the target FSx for ONTAP file system.
 
-== Step 1: Create a replication relationship
+== Step 1: Create the replication relationship
 Replicate data between two FSx for ONTAP file systems, between an on-premises ONTAP system and an FSx for ONTAP file system, or between Cloud Volumes ONTAP and an FSx for ONTAP file system.
 
 .Before you begin
@@ -149,4 +149,4 @@ After you cut over replication for migration use cases, update the following sto
 
 == Related information
 
-link:change-tiering-policy.html[Modify the tiering policy] for the target volume(s) after cutover.
+link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_wa-updates/change-tiering-policy.html[Modify the tiering policy] for the target volume(s) after cutover.
