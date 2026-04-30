@@ -87,11 +87,14 @@ Consider when you choose to complete this operation. Initialization can be time-
 .Steps
 . In the NetApp Console, select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 
+//Rachel L: Include content comes from the workload-fsx-ontap repository.
 include::https://raw.githubusercontent.com/NetAppDocs/workload-fsx-ontap/main/_include/initialize-replication.adoc[]
 
 [start=7]
 //Rachel L: Added a hack to make the last step have a numbered step in the right order.
-. Select *Initialize*.
+. In the Initialize relationship dialog, select *Initialize*. 
++
+When the replication status shows *Idle*, the data transfer is complete. 
 
 == Step 3: Cut over replication for migration use cases 
 
@@ -126,6 +129,7 @@ Review these requirements before you begin.
 .Steps
 . In the NetApp Console, select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 
+//Rachel L: Include content comes from the workload-fsx-ontap repository.
 include::https://raw.githubusercontent.com/NetAppDocs/workload-fsx-ontap/main/_include/cutover-replication.adoc[]
 
 [start=7]
