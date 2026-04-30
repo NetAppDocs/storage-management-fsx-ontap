@@ -90,7 +90,7 @@ Consider when you choose to complete this operation. Initialization can be time-
 //Rachel L: Include content comes from the workload-fsx-ontap repository.
 include::https://raw.githubusercontent.com/NetAppDocs/workload-fsx-ontap/main/_include/initialize-replication.adoc[]
 
-[start=7]
+[start=6]
 //Rachel L: Added a hack to make the last step have a numbered step in the right order.
 . In the Initialize relationship dialog, select *Initialize*. 
 +
