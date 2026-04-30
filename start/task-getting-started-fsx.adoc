@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: start/task-getting-started-fsx.html
-keywords: Amazon FSx for NetApp ONTAP, fsx, netapp, data fabric, hybrid cloud, cloud, public cloud, networking, vpc, quick, getting started, install, installing, deploy, deploying, setup, setting up, launching, requirements, prerequisites, netapp console, get started, permissions, policy, iam policy, policies, attach, iam user, access key, secret key, keys, sign up, cloud manager, create, bluexp
+keywords: Amazon FSx for NetApp ONTAP, fsx, netapp, data fabric, hybrid cloud, cloud, public cloud, networking, vpc, quick, getting started, install, installing, deploy, deploying, setup, setting up, launching, requirements, prerequisites, netapp console, get started, permissions, policy, iam policy, policies, attach, iam user, access key, secret key, keys, sign up, cloud manager, create
 summary: "Get started with Amazon FSx for NetApp ONTAP in the NetApp Console by adding credentials, creating a Console agent or link, and by creating or discovering a file system."
 ---
 

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: use/task-create-fsx-system.html
-keywords: Amazon FSx for NetApp ONTAP, fsx, volumes, create system, delete system, access key, secret key, region, working environment, availability zones, discover, storage capacity, iops, throughput, security group, security, bluexp, NetApp Console
+keywords: Amazon FSx for NetApp ONTAP, fsx, volumes, create system, delete system, access key, secret key, region, working environment, availability zones, discover, storage capacity, iops, throughput, security group, security, NetApp Console
 summary: "Create or discover an FSx for ONTAP file systems to add and manage volumes and additional data services from the NetApp Console."
 ---
 
