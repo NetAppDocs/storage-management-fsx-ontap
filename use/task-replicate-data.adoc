@@ -41,7 +41,7 @@ Workload Factory supports migration replication between the following storage sy
 ** First to first generation 
 ** Second to second generation
 
-To migrate storage VM data and configuration settings, you must complete two operations.
+To migrate storage VM data and configuration settings, you must complete three operations.
 
 1. <<Step 1: Create the replication relationship,Create the replication relationship>>, select *Migration* as the use case and select *Replicate storage VM configuration*.
 2. <<Step 2: Initialize the replication relationship,Initialize the replication relationship>> to transfer the data from the source to the target storage system.
@@ -132,7 +132,7 @@ Review these requirements before you begin.
 //Rachel L: Include content comes from the workload-fsx-ontap repository.
 include::https://raw.githubusercontent.com/NetAppDocs/workload-fsx-ontap/main/_include/cutover-replication.adoc[]
 
-[start=7]
+[start=6]
 //Rachel L: Added a hack to make the last step have a numbered step in the right order.
 . Select *Cut over*.
 
