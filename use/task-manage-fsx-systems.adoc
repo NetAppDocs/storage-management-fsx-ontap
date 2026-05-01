@@ -15,11 +15,11 @@ summary: After you create or discover an FSx for ONTAP system in NetApp Console,
 [.lead]
 After you create or discover an FSx for ONTAP system in the NetApp Console, you can manage the file system by creating volumes, managing storage VMs, protecting data, and administering the file system. The Console also enables you to use data services that provide capabilities like backup and recovery, data classification, data synchronization, and more.
 
-== Manage a file system using NetApp Workloads
+== Manage a file system using NetApp Workload Factory
 
-When you open an FSx for ONTAP system from the NetApp Console Systems page, you're brought to NetApp Workloads. Workloads is an intelligent optimization and automation service that uses industry best practices to plan, provision, and operate key workloads using Amazon FSx for NetApp ONTAP.
+When you open an FSx for ONTAP system from the NetApp Console Systems page, you're brought to NetApp Workload Factory. NetApp Workload Factory is an intelligent optimization and automation service that uses industry best practices to plan, provision, and operate key workloads using Amazon FSx for NetApp ONTAP.
 
-https://docs.netapp.com/us-en/workload-fsx-ontap/index.html[Learn how to manage a file system using NetApp Workloads^]
+https://docs.netapp.com/us-en/workload-fsx-ontap/index.html[Learn how to manage a file system using NetApp Workload Factory^]
 
 == Manage a file system using ONTAP System Manager
 
