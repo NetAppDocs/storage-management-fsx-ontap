@@ -16,7 +16,7 @@ Learn what's new in FSx for ONTAP.
 
 == 15 July 2026
 
-include::.._whatsnew/2026-07-15.adoc[]
+include::_whatsnew/2026-07-15.adoc[]
 
 == 01 March 2026
 
