@@ -1,2 +1,0 @@
-=== GenAI workload removal from Workloads in the NetApp Console 
-The GenAI workload will be removed from Workloads in the NetApp Console soon. If you have any GenAI workloads, please take action to migrate or remove them before the deprecation date. 

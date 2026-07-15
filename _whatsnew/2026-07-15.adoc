@@ -1,0 +1,2 @@
+=== GenAI workload removal from Workloads in the NetApp Console 
+The GenAI workload has been removed from Workloads in the NetApp Console. 
