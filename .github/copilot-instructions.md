@@ -20,7 +20,7 @@ Product: Amazon FSx for NetApp ONTAP
 - *NetApp Console* is the management entry point for the workflows documented in this repository.
 - *NetApp Workload Factory* manages the AWS credentials and permissions used for FSx for ONTAP operations, and many file-system operations route from the Console into Workload Factory.
 - *ONTAP System Manager* is another management path for an FSx for ONTAP file system from the Console and requires a *Console agent* or *link*.
-- A *Console agent* is NetApp software deployed in a cloud or on-premises network, and a *link* uses AWS Lambda to establish connectivity and trust to FSx for ONTAP systems.
+- A *Console agent* is NetApp software deployed in a cloud or on-premises network, and a *link* uses AWS Lambda to establish connectivity between a NetApp Console account and one or more FSx for ONTAP file systems.
 - A *storage VM* is created with a file system and is the unit used for volume management and some replication and migration operations.
 - *Volumes* belong to a storage VM; replicated target volumes are *DP* volumes named `{OriginalVolumeName}_copy`.
 
