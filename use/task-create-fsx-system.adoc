@@ -5,7 +5,7 @@ keywords: Amazon FSx for NetApp ONTAP, fsx, volumes, create system, delete syste
 summary: "Create or discover an FSx for ONTAP file systems to add and manage volumes and additional data services from the NetApp Console."
 ---
 
-= Create or discover an FSx for ONTAP file system
+= Create or discover an Amazon FSx for NetApp ONTAP file system
 :hardbreaks:
 :nofooter:
 :icons: font

@@ -5,7 +5,7 @@ keywords: amazon fsx for netapp ontap, fsx, manage fsx for ontap system, delete 
 summary: After you create or discover an FSx for ONTAP system in NetApp Console, you can manage the file system and use NetApp data services that provide capabilities like backup and recovery.
 ---
 
-= Manage an FSx for ONTAP file system in the NetApp Console
+= Manage Amazon FSx for NetApp ONTAP file systems
 :hardbreaks:
 :nofooter:
 :icons: font
