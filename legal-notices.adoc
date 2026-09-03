@@ -5,7 +5,7 @@ keywords:
 summary:
 ---
 
-= Legal notices
+= Legal notices for Amazon FSx for NetApp ONTAP
 :icons: font
 :imagesdir: ./media/
 
