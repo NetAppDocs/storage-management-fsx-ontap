@@ -5,7 +5,7 @@ keywords: amazon fsx for netapp ontap, fsx for ontap, fsx, remove fsx for ontap 
 summary: "Remove an FSx for ONTAP file system from a project in the NetApp Console." 
 ---
 
-= Remove an FSx for ONTAP file system from a project
+= Remove an Amazon FSx for NetApp ONTAP file system from a project
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -24,4 +24,3 @@ Removing an FSx for ONTAP file system from a project removes it from the NetApp 
 . Select *Enter System*.
 . From FSx for ONTAP in Storage, select the three-dot menu and then select *Remove from project*. 
 . Select *Remove* to confirm the removal of the file system from the project.
-

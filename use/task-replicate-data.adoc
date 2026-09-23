@@ -5,7 +5,7 @@ keywords: replication, replicate fsx for ontap, data protection, disaster recove
 summary: "Create a replication relationship for an FSx for ONTAP file system to avoid data loss in case of an unforeseen disaster from the NetApp Console."
 ---
 
-= Replicate data to FSx for ONTAP in NetApp Console
+= Replicate data with Amazon FSx for NetApp ONTAP
 :icons: font
 :imagesdir: ../media/
 
@@ -149,4 +149,4 @@ After you cut over replication for migration use cases, update the following sto
 
 == Related information
 
-link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_wa-updates/change-tiering-policy.html[Modify the tiering policy] for the target volume(s) after cutover.
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/change-tiering-policy.html[Modify the tiering policy] for the target volume(s) after cutover.
